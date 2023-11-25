@@ -11,4 +11,8 @@ if not vim.loop.fs_stat(lazypath) then
 end
 vim.opt.rtp:prepend(lazypath)
 
-require("lazy").setup("apigeon.plugins")
+require("lazy").setup("apigeon.plugins", {
+    install = {
+        colorscheme = {"catppuccin"}
+    }
+})
