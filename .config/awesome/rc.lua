@@ -442,6 +442,6 @@ client.connect_signal("focus", function(c) c.border_color = beautiful.border_foc
 client.connect_signal("unfocus", function(c) c.border_color = beautiful.border_normal end)
 -- }}}
 --
+awful.spawn.with_shell("picom")
+awful.spawn.with_shell("nitrogen --restore")
 awful.spawn("sh /home/apigeon/.config/polybar/launch.sh")
-awful.spawn("nitrogen --restore")
-awful.spawn("killall -9 compton && compton")
