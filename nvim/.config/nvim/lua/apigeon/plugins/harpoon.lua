@@ -10,7 +10,7 @@ return {
 
 		local set = vim.keymap.set
 
-		set("n", "<leader>q", function()
+		set("n", "<leader>a", function()
 			harpoon:list():add() -- add file to harpoon
 		end)
 		set("n", "<C-e>", function()
@@ -18,30 +18,30 @@ return {
 		end)
 
 		-- Switch to harpooned file 1-4
-		set("n", "<leader>a", function()
+		set("n", "<leader>h", function()
 			harpoon:list():select(1)
 		end)
-		set("n", "<leader>z", function()
+		set("n", "<leader>j", function()
 			harpoon:list():select(2)
 		end)
-		set("n", "<leader>e", function()
+		set("n", "<leader>k", function()
 			harpoon:list():select(3)
 		end)
-		set("n", "<leader>r", function()
+		set("n", "<leader>l", function()
 			harpoon:list():select(4)
 		end)
 
 		-- susbstitute harpoon file 1-4 with new files
-		set("n", "<leader><C-a>", function()
+		set("n", "<leader><C-h>", function()
 			harpoon:list():replace_at(1)
 		end)
-		set("n", "<leader><C-z>", function()
+		set("n", "<leader><C-j>", function()
 			harpoon:list():replace_at(2)
 		end)
-		set("n", "<leader><C-e>", function()
+		set("n", "<leader><C-k>", function()
 			harpoon:list():replace_at(3)
 		end)
-		set("n", "<leader><C-r>", function()
+		set("n", "<leader><C-l>", function()
 			harpoon:list():replace_at(4)
 		end)
 
